@@ -1,8 +1,8 @@
 {
-  "name": "Health Check",
+  "name": "Kosbot",
   "version": "1.0.0",
   "private": true,
-  "description": "Aplikasi identifikasi penyakit anemia",
+  "description": "Aplikasi prediksi harga kost",
   "keywords": [
     "nuxt",
     "nuxt pwa",
