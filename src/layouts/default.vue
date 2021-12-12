@@ -20,7 +20,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar color="pink lighten-2" dark fixed app>
+    <v-app-bar color="pink lighten-3" dark fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title><strong>Health Check </strong></v-toolbar-title>
       <v-spacer></v-spacer>
@@ -97,7 +97,7 @@
         </v-layout>
       </v-container>
     </v-main>
-    <v-footer color="pink lighten-2" app>
+    <v-footer color="pink lighten-3" app>
       <span class="white--text"
         >All right reserved | &copy; {{ new Date().getFullYear() }}</span
       >
