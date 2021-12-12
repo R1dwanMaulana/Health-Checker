@@ -36,7 +36,7 @@ export default {
       // },
       // { property: "og:type", content: "website" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/bot2.ico" }],
   },
 
   // https://nuxtjs.org/api/configuration-modules
