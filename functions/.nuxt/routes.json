@@ -1,0 +1,20 @@
+[
+  {
+    "name": "home",
+    "path": "/home",
+    "component": "C:\\\\Users\\\\linuxer\\\\Downloads\\\\ES\\\\src\\\\pages\\\\home.vue",
+    "chunkName": "pages/home"
+  },
+  {
+    "name": "menu",
+    "path": "/menu",
+    "component": "C:\\\\Users\\\\linuxer\\\\Downloads\\\\ES\\\\src\\\\pages\\\\menu.vue",
+    "chunkName": "pages/menu"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\linuxer\\\\Downloads\\\\ES\\\\src\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]
