@@ -67,7 +67,7 @@ export default {
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Health Check" },
-      { property: "og:url", content: "https://health-checker.vercel.app/" },
+      { property: "og:url", content: "https://health-check.vercel.app/" },
     ],
   },
 };
