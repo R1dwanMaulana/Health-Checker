@@ -1,12 +1,10 @@
-## Boarding house price prediction application in the city of Malang, with Machine Learning
+## Anemia Disease Identification Application, with Expert System
 
 > Nuxt.js + PWA + Vuetify.js + Firebase starter project
 
 ## View
 <img src="./src/static/view.png" width="250px"> <br/>
 
-## Model Accuracy
-<img src="./src/static/accuracy.png" width="300px"> <br/>
 
 ## Features
 
