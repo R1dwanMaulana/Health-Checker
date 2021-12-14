@@ -1,8 +1,8 @@
 {
-  "name": "Kosbot",
+  "name": "health-checker",
   "version": "1.0.0",
   "private": true,
-  "description": "Aplikasi prediksi harga kost",
+  "description": "Aplikasi identifikasi penyakit anemia",
   "keywords": [
     "nuxt",
     "nuxt pwa",
@@ -20,10 +20,7 @@
     "firebase"
   ],
   "license": "MIT",
-  "author": {
-    "name": "Ridwan Maulana",
-    "url": "https://riddev.tech"
-  },
+  "author": "Ridwan Maulana (https://riddev.tech)",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt",
@@ -100,5 +97,14 @@
       "prettier --write",
       "eslint --fix"
     ]
-  }
+  },
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R1dwanMaulana/Health-Checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/R1dwanMaulana/Health-Checker/issues"
+  },
+  "homepage": "https://github.com/R1dwanMaulana/Health-Checker#readme"
 }
