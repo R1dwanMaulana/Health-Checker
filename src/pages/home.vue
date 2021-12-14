@@ -17,14 +17,7 @@
           <v-btn
             depressed
             color="pink lighten-2"
-            class="
-              white--text
-              rounded-lg
-              pr-1
-              pl-2
-              text-subtitle-2 text-caption
-              font-weight-medium
-            "
+            class="white--text rounded-lg pr-1 pl-2 text-subtitle-2 text-caption font-weight-medium"
             elevation="10"
           >
             Cek sekarang
@@ -51,7 +44,7 @@ export default {
         name: "description",
         content: "Aplikasi identikasi penyakit anemia",
       },
-      // { property: "og:image", content: "/meta-image-kosbot.png" },
+      { property: "og:image", content: "/bot1.png" },
       { name: "format-detection", content: "telephone=no" },
       {
         name: "description",
