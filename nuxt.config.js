@@ -12,6 +12,7 @@ export default {
 
   // https://nuxtjs.org/api/configuration-head
   head: {
+    title: 'Health Check',
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
