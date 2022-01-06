@@ -294,14 +294,8 @@
             Cek
           </v-btn>
           <p class="mt-6 grey lighten-3 black--text rounded-md px-3 py-2">
-            Jenis penyakit anda adalah
-            <!-- {{
-              new Intl.NumberFormat("id-ID", {
-                style: "currency",
-                currency: "IDR",
-              }).format(predict)
-            }} -->
-            <!-- / bulan -->
+            Jenis penyakit Anda adalah {{ predict }} <br />
+            Pengobatan : {{ treatment }}
           </p>
         </form>
       </validation-observer>
@@ -312,7 +306,7 @@
         :timeout="timeout"
         :disabled="invalid"
         elevation="24"
-        >Sedang mencari harga kost untuk Anda.</v-snackbar
+        >Sedang menganalisis data Anda, Mohon menunggu...</v-snackbar
       >
     </div>
   </div>
@@ -372,18 +366,10 @@ export default {
       g12: null,
       g13: null,
       g14: null,
-      predict: 0,
+      predict: "",
+      treatment: "",
       submitted: false,
-      // items: [
-      //   { property: "Kamar mandi dalam" },
-      //   { property: "Meja" },
-      //   { property: "Kursi" },
-      //   { property: "Dapur" },
-      //   { property: "AC" },
-      //   { property: "WiFi" },
-      //   { property: "Parkir Motor" },
-      //   { property: "Parkir Mobil" },
-      // ],
+
       g1s: [
         { text: "Iya", value: 1 },
         { text: "Tidak", value: 0 },
@@ -447,32 +433,139 @@ export default {
       try {
         this.loading = true;
         this.snackbar = true;
+        console.log(this.g1s);
         await new Promise((resolve) => setTimeout(resolve, 5000));
-        this.predict =
-          // -68531.9999133359 +
-          // 193290.7399441 * this.length +
-          // 53787.09955987 * this.width +
-          // 223041.25251717 * this.bathroom +
-          // -94016.99467001 * this.table +
-          // 50481.71483865 * this.chair +
-          // 151462.80891942 * this.kitchen +
-          // 599669.48438946 * this.chooseAc +
-          // 60937.34930789 * this.chooseWifi +
-          // -147062.92326872 * this.motorcyleParking +
-          // 83730.52196747 * this.carParking +
-          // -14352.91188581 * this.location;
-          -148047.27476719278 +
-          164974.23423571 * this.length +
-          76671.12127056 * this.width +
-          227707.434326 * this.bathroom +
-          -56106.94865448 * this.table +
-          28947.18630694 * this.chair +
-          117698.12077464 * this.kitchen +
-          600114.34157571 * this.chooseAc +
-          56860.15723041 * this.chooseWifi +
-          -18779.72174119 * this.motorcyleParking +
-          71576.69697222 * this.carParking +
-          -17839.86082162 * this.location;
+        if (
+          this.g1 === 1 &&
+          this.g2 === 1 &&
+          this.g3 === 1 &&
+          this.g4 === 1 &&
+          this.g5 === 1 &&
+          this.g6 === 1 &&
+          this.g7 === 1 &&
+          this.g8 === 1 &&
+          this.g9 === 0 &&
+          this.g10 === 0 &&
+          this.g11 === 0 &&
+          this.g12 === 0 &&
+          this.g13 === 0 &&
+          this.g14 === 0
+        ) {
+          this.predict = "kekurangan zat besi";
+          this.treatment = "makanan kaya zat besi, suplemen zat besi";
+        } else if (
+          this.g1 === 1 &&
+          this.g2 === 0 &&
+          this.g3 === 1 &&
+          this.g4 === 0 &&
+          this.g5 === 0 &&
+          this.g6 === 1 &&
+          this.g7 === 0 &&
+          this.g8 === 0 &&
+          this.g9 === 0 &&
+          this.g10 === 0 &&
+          this.g11 === 0 &&
+          this.g12 === 0 &&
+          this.g13 === 0 &&
+          this.g14 === 0
+        ) {
+          this.predict = "thalesemia";
+          this.treatment =
+            "transfusi darah,suplemen asam folat, pengangkatan limpa, dan transplantasi";
+        } else if (
+          this.g1 === 1 &&
+          this.g2 === 1 &&
+          this.g3 === 0 &&
+          this.g4 === 1 &&
+          this.g5 === 1 &&
+          this.g6 === 1 &&
+          this.g7 === 1 &&
+          this.g8 === 0 &&
+          this.g9 === 0 &&
+          this.g10 === 0 &&
+          this.g11 === 0 &&
+          this.g12 === 0 &&
+          this.g13 === 0 &&
+          this.g14 === 0
+        ) {
+          this.predict = "masa kehamilan";
+          this.treatment = "suplemen zat besi, vitamin B12, dan asam folat";
+        } else if (
+          this.g1 === 1 &&
+          this.g2 === 1 &&
+          this.g3 === 0 &&
+          this.g4 === 1 &&
+          this.g5 === 1 &&
+          this.g6 === 1 &&
+          this.g7 === 1 &&
+          this.g8 === 0 &&
+          this.g9 === 1 &&
+          this.g10 === 1 &&
+          this.g11 === 1 &&
+          this.g12 === 0 &&
+          this.g13 === 0 &&
+          this.g14 === 0
+        ) {
+          this.predict = "aplastik";
+          this.treatment = "tranfusi darah";
+        } else if (
+          this.g1 === 1 &&
+          this.g2 === 1 &&
+          this.g3 === 0 &&
+          this.g4 === 1 &&
+          this.g5 === 0 &&
+          this.g6 === 0 &&
+          this.g7 === 0 &&
+          this.g8 === 0 &&
+          this.g9 === 0 &&
+          this.g10 === 0 &&
+          this.g11 === 0 &&
+          this.g12 === 1 &&
+          this.g13 === 1 &&
+          this.g14 === 1
+        ) {
+          this.predict = "hemolitik";
+          this.treatment = "mengobati infeksi dan pengangkatan limpa";
+        } else if (
+          this.g1 === 1 &&
+          this.g2 === 0 &&
+          this.g3 === 0 &&
+          this.g4 === 1 &&
+          this.g5 === 0 &&
+          this.g6 === 1 &&
+          this.g7 === 0 &&
+          this.g8 === 0 &&
+          this.g9 === 0 &&
+          this.g10 === 0 &&
+          this.g11 === 0 &&
+          this.g12 === 0 &&
+          this.g13 === 0 &&
+          this.g14 === 0
+        ) {
+          this.predict = "penyakit kronis";
+          this.treatment = "tranfusi darah dan suntik hormon eritropoietin";
+        } else if (
+          this.g1 === 0 &&
+          this.g2 === 0 &&
+          this.g3 === 0 &&
+          this.g4 === 1 &&
+          this.g5 === 0 &&
+          this.g6 === 0 &&
+          this.g7 === 1 &&
+          this.g8 === 0 &&
+          this.g9 === 0 &&
+          this.g10 === 0 &&
+          this.g11 === 0 &&
+          this.g12 === 1 &&
+          this.g13 === 1 &&
+          this.g14 === 1
+        ) {
+          this.predict = "sel sabit";
+          this.treatment = "suplemen zar besi, transplantasi, dan kemoterapi";
+        } else {
+          this.predict = "bukan penyakit anemia";
+          this.treatment = "tidak ada pengobatan";
+        }
       } catch (error) {
         console.log(error);
       } finally {
