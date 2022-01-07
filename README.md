@@ -1,6 +1,5 @@
-## Anemia Disease Identification Application, with Expert System
+## Anemia Disease Identification Application with Expert System
 
-> Nuxt.js + PWA + Vuetify.js + Firebase starter project
 
 ## View
 <img src="./src/static/view1.png" width="250px"> <br/>
@@ -8,12 +7,7 @@
 
 ## Features
 
-This starter project includes official Nuxt.js modules for best PWA project:
-
-- [Http](https://github.com/nuxt/http)
-- [PWA](https://github.com/nuxt-community/pwa-module)
-
-It is also enriched with the best Vue's UI framework:
+with the best Vue's UI framework:
 
 - [Vuetify](https://vuetifyjs.com)
 - [VeeValidate](https://logaretm.github.io/vee-validate)
